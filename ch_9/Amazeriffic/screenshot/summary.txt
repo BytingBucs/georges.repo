@@ -1,2 +1,3 @@
 amazerific_completed_ch9.png	completion upto last section "Improving Our ToDo Controller Actions"
 completed-controlers_users.png	demonstrating functionality of above, CSS not loading for example user
+completed.png	demonstrating completed website

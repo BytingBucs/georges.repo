@@ -80,3 +80,8 @@ app.post("/todos", ToDosController.create);
     app.get("/users/:username", UsersController.show);
 app.put("/users/:username", UsersController.update);
     app.del("/users/:username", UsersController.destroy);
+
+  app.get("/users/:username/todos.json", ToDosController.index);
+    app.post("/users/:username/todos", ToDosController.create);
+//    app.put("/users/:username/todos/:id", ToDosController.update);
+//    app.del("/users/:username/todos/:id", ToDosController.destroy);
