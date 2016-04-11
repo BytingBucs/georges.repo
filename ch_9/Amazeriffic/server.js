@@ -1,14 +1,15 @@
-// pg 265, controllers are what's left
-// 3 sections left to add: routes by ID, jquery for requests, model controllers
-//contenue on pg 259
 // saving while contenturing testing on vagrant 13 apr 16
 //modified by following ch .9 instructions, includes being created as work progresses
+
+
 
 var express = require("express"),
     http = require("http"),
     // import the mongoose library
     mongoose = require("mongoose"),
     ToDosController = require("./controllers/todos_controller.js"),
+    UsersController = require("./models/user.js"),
+//book failed to mention above line
     app = express(),
     services,
     mongoUrl = "mongodb://localhost/amazeriffic";
@@ -24,6 +25,8 @@ if (process.env.VCAP_SERVICES) {
 
 console.log(mongoUrl);
 
+
+//sections removed below due to organization from ch 9
 // connect to the amazeriffic data store in mongo
 mongoose.connect(mongoUrl);
 
@@ -66,3 +69,14 @@ app.post("/todos", ToDosController.create);
 //	}
 //  });
 //});
+
+
+//routes added
+
+//rename usersController.index to UsersController.index
+//book had spelling errors
+    app.get("/users.json", UsersController.index);
+    app.post("/users", UsersController.create);
+    app.get("/users/:username", UsersController.show);
+app.put("/users/:username", UsersController.update);
+    app.del("/users/:username", UsersController.destroy);
