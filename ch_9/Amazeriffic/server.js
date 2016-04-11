@@ -1,3 +1,5 @@
+//modified by following ch .9 instructions, includes being created as work progresses
+
 var express = require("express"),
     http = require("http"),
     // import the mongoose library
