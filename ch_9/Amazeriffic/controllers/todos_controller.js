@@ -1,3 +1,5 @@
+//creating import modules per ch.9 instructions
+
 // note that this needs to start up one 
 // directory to find our models directory 
 var ToDo = require("../models/todo.js"),
