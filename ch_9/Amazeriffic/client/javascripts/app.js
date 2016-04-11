@@ -119,3 +119,26 @@ $(document).ready(function () {
         main(toDoObjects);
     });
 });
+
+//pg. 261 jQuery example
+// PUT example with jQuery
+$.ajax({
+        "url" : "todos/1234",
+        "type": "PUT",
+        "data": {"description":"this is the new description"},
+}).done(function (response) { 
+	// success!
+}).fail(function (err) { 
+	// error!
+});
+
+// DELETE example with jQuery
+$.ajax({
+        "url" : "todos/1234",
+	"type": "DELETE", 
+}).done(function (response) {
+	// success!
+}).fail(function (err) { 
+	// error!
+});
+
