@@ -1,3 +1,4 @@
+// pg 265, controllers are what's left
 // 3 sections left to add: routes by ID, jquery for requests, model controllers
 //contenue on pg 259
 // saving while contenturing testing on vagrant 13 apr 16
